@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presidencia de Mauricio Macri (2015-2019)</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --bg: #f4f7f6;
+            --text: #333;
+            --white: #ffffff;
+            --success-light: #ebf7ee;
+            --success-border: #2ecc71;
+            --danger-light: #fdf2f2;
+            --danger-border: #e74c3c;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navegación */
+        nav {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* Encabezado */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1589909202802-8f4aadce1849?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+        }
+
+        /* Contenedor Principal */
+        .container {
+            max-width: 950px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: var(--white);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: var(--primary);
+            border-bottom: 3px solid var(--accent);
+            padding-bottom: 10px;
+        }
+
+        .highlight {
+            background: #eef7ff;
+            padding: 15px;
+            border-left: 5px solid var(--accent);
+            font-style: italic;
+        }
+
+        /* Estilos para las nuevas imágenes */
+        .section-img {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin: 15px 0 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        }
+
+        /* Estructura del Balance (Dos Columnas) */
+        .balance-grid {
+            display: flex;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .balance-col {
+            flex: 1;
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        .balance-col h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+
+        .col-positiva {
+            background-color: var(--success-light);
+            border-top: 4px solid var(--success-border);
+        }
+
+        .col-positiva h3 {
+            color: #27ae60;
+        }
+
+        .col-negativa {
+            background-color: var(--danger-light);
+            border-top: 4px solid var(--danger-border);
+        }
+
+        .col-negativa h3 {
+            color: #c0392b;
+        }
+
+        .balance-col ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        .balance-col li {
+            margin-bottom: 12px;
+        }
+
+        /* Estilo de la Línea de Tiempo */
+        .timeline {
+            border-left: 3px solid var(--accent);
+            margin-left: 20px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .timeline-item {
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background: var(--accent);
+            border-radius: 50%;
+            position: absolute;
+            left: -39px;
+            top: 5px;
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: var(--accent);
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: var(--primary);
+            color: white;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.8rem; }
+            nav a { display: block; margin: 10px 0; }
+            .balance-grid { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#inicio">INICIO</a>
+        <a href="#economia">ECONOMÍA</a>
+        <a href="#gestion">GESTIÓN</a>
+        <a href="#internacional">INTERNACIONAL</a>
+        <a href="#timeline">CRONOLOGÍA</a>
+        <a href="#balance">BALANCE</a>
+    </nav>
+
+    <header id="inicio">
+        <h1>Presidencia de Mauricio Macri</h1>
+        <p>Análisis histórico del periodo 2015 - 2019</p>
+    </header>
+
+    <div class="container">
+        
+        <section>
+            <h2>Introducción</h2>
+            <p>El 10 de diciembre de 2015, Mauricio Macri asumió la presidencia de la Nación Argentina tras imponerse en una histórica segunda vuelta electoral (balotaje) ante el candidato del oficialismo, Daniel Scioli. Liderando la coalición política <strong>Cambiemos</strong> (integrada principalmente por Propuesta Republicana, la Unión Cívica Radical y la Coalición Cívica), su acceso al Poder Ejecutivo marcó un hito político: fue la primera vez en la historia argentina moderna que una fuerza política de centroderecha, de origen reciente y no tradicional, alcanzaba la presidencia mediante el voto popular.</p>
+            <p>Su triunfo representó el cierre definitivo de un ciclo de 12 años consecutivos de administraciones kirchneristas (Néstor Kirchner y dos mandatos de Cristina Fernández de Kirchner). El nuevo gobierno propuso un giro radical en el paradigma político, económico y social del país, promoviendo una visión basada en la apertura de los mercados hacia el exterior, el fortalecimiento de la seguridad jurídica, el respeto irrestricto por las libertades republicanas y una profunda modernización de las estructuras e instituciones del Estado.</p>
+            <p class="highlight">Ejes fundamentales de campaña: Las promesas rectoras de la gestión se sintetizaron en tres grandes objetivos nacionales: alcanzar la "Pobreza Cero", pacificar y unir a los argentinos superando la polarización política conocida como "la grieta", y combatir de manera frontal el narcotráfico y el crimen organizado.</p>
+        </section>
+
+        <section id="economia">
+            <h2>Política Económica</h2>
+            <p>La estrategia macroeconómica implementada durante los primeros años del mandato se conoció bajo el nombre de <strong>gradualismo</strong>. Este enfoque buscaba corregir las profundas distorsiones acumuladas en la economía (como el alto déficit fiscal, el atraso tarifario y la distorsión de precios relativos) de una manera pausada y previsible, con el propósito explícito de amortiguar el impacto social de los ajustes. Para financiar la transición y cubrir la brecha del gasto público sin recurrir a la emisión monetaria desenfrenada, el gobierno optó por una estrategia de fuerte endeudamiento en los mercados financieros internacionales.</p>
+            
+            <img class="section-img" src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=950&q=80" alt="Gráficos y análisis financiero">
+
+            <ul>
+                <li><strong>Primeras medidas de apertura (2015-2016):</strong> A los pocos días de asumir, el Ministerio de Hacienda desmanteló el control de cambios de la administración anterior, popularmente denominado "cepo cambiario", unificando el mercado de divisas. De manera simultánea, se eliminaron o redujeron significativamente las retenciones a las exportaciones agrícolas y se logró cerrar un acuerdo definitivo con los <i>holdouts</i> (fondos buitre) en los tribunales de Nueva York, lo que permitió que la Argentina saliera formalmente del default técnico y recuperara el acceso al crédito internacional.</li>
+                <li><strong>La crisis cambiaria del 2018:</strong> A partir de los primeros meses de 2018, el modelo económico sufrió un severo revés estructural. Una combinación de factores internos —destacándose una de las peores sequías agrícolas en décadas que diezmó las exportaciones— y externos —como la suba de tasas de interés por parte de la Reserva Federal de los Estados Unidos— provocó una abrupta reversión de los flujos de capital. La pérdida de confianza derivó en una corrida cambiaria, una devaluación masiva del peso argentino y un salto inflacionario que el esquema de metas de inflación del Banco Central no pudo contener.</li>
+                <li><strong>El histórico auxilio del FMI:</strong> Frente a la imposibilidad de seguir financiando los vencimientos de deuda a través del mercado privado, el presidente Macri anunció el regreso de la Argentina al Fondo Monetario Internacional (FMI). Tras complejas negociaciones, se suscribió un acuerdo <i>Stand-By</i> inicial que luego fue ampliado hasta alcanzar la cifra récord de 57.000 millones de dólares. El programa financiero exigió un compromiso de aceleración del ajuste fiscal con el fin de equilibrar las cuentas públicas, pero generó fuertes controversias políticas y un incremento sustancial en el ratio de deuda sobre el Producto Interno Bruto (PIB).</li>
+            </ul>
+        </section>
+
+        <section id="gestion">
+            <h2>Gestión, Infraestructura y Obra Pública</h2>
+            <p>En el plano de la gestión interna, el gobierno se propuso transformar los mecanismos de contratación de la obra pública, buscando garantizar procesos competitivos, transparentes y libres de corrupción mediante el sistema de licitaciones públicas transparentes y el esquema de Participación Público-Privada (PPP), aunque este último se vio condicionado posteriormente por la crisis macroeconómica.</p>
+            
+            <img class="section-img" src="https://images.unsplash.com/photo-1473872170063-eb9248b6e6ae?auto=format&fit=crop&w=950&q=80" alt="Infraestructura y energía sustentable">
+
+            <ul>
+                <li><strong>Matriz Energética y Vaca Muerta:</strong> Se priorizó el desarrollo del yacimiento de hidrocarburos no convencionales Vaca Muerta en la provincia de Neuquén, logrando récords de productividad mediante la flexibilización de convenios laborales y estímulos a la inversión. Paralelamente, mediante el programa "RenovAr", se impulsó un cambio histórico en la generación de energía limpia, concretando la construcción de decenas de parques solares y eólicos a lo largo y ancho del territorio nacional.</li>
+                <li><strong>Plan Nacional de Transporte e Infraestructura:</strong> Se ejecutó una fuerte inversión sectorial orientada a la conectividad y la logística. Esto abarcó la pavimentación y duplicación de calzadas en miles de kilómetros de rutas y autopistas nacionales, la reactivación integral de los ferrocarriles de carga (como el Belgrano Cargas) y la expansión de la red de carriles exclusivos para colectivos (Metrobús) en los principales centros urbanos del país. Asimismo, la política aerocomercial generó la denominada "revolución de los aviones", permitiendo la entrada de aerolíneas de bajo costo (low-cost) y modernizando aeropuertos provinciales.</li>
+                <li><strong>Políticas y Amparo Social:</strong> A pesar del perfil pro-mercado de la gestión y la necesidad de reducir partidas presupuestarias, se mantuvieron y ampliaron los principales planes sociales heredados. Una de las medidas de mayor cobertura fue la extensión de los beneficios de la Asignación Universal por Hijo (AUH) hacia los trabajadores monotributistas, buscando sostener una red de contención para los sectores de menores ingresos frente a la aceleración de los índices de precios.</li>
+            </ul>
+        </section>
+
+        <section id="internacional">
+            <h2>Relaciones Exteriores y Reinserción Global</h2>
+            <p>Bajo la premisa política de consolidar una "reinserción inteligente" en el escenario internacional, la administración de Cambiemos modificó radicalmente la estrategia diplomática anterior, abandonando las alianzas de fuerte contenido ideológico regional (como el eje bolivariano) para reestablecer y estrechar los vínculos políticos y comerciales directos con potencias occidentales de primer orden, tales como los Estados Unidos, la Unión Europea y las naciones que integran la Alianza del Pacífico.</p>
+            
+            <img class="section-img" src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=950&q=80" alt="Reuniones multilaterales internacionales">
+
+            <p>El punto culmine de esta estrategia diplomática multilineal tuvo lugar a fines del año 2018, con la organización y desarrollo de la **Cumbre de Líderes del G20** en la Ciudad Autónoma de Buenos Aires. Este evento congregó a los jefes de Estado de las economías más avanzadas y emergentes del planeta, posicionando de forma provisoria a la Argentina en el centro de las deliberaciones de la agenda global. Otro avance de enorme relevancia en materia de integración fue la firma del histórico acuerdo marco de libre comercio entre el Mercosur y la Unión Europea en 2019, tras dos décadas de dilatadas negociaciones complejas, el cual quedó sujeto a los posteriores procesos de ratificación parlamentaria.</p>
+        </section>
+
+        <section id="timeline">
+            <h2>Cronología Clave</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-date">Dic 2015</span>
+                    <strong>Asunción y fin del cepo:</strong> Comienzo del mandato y liberación del mercado de cambios.
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">Oct 2017</span>
+                    <strong>Victoria legislativa:</strong> El gobierno gana las elecciones de medio término.
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">Mayo 2018</span>
+                    <strong>Pedido al FMI:</strong> Inicio de las negociaciones ante la crisis cambiaria.
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">Nov 2018</span>
+                    <strong>Cumbre G20:</strong> Líderes mundiales se reúnen en Argentina.
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">Dic 2019</span>
+                    <strong>Traspaso de mando:</strong> Finaliza el periodo y asume Alberto Fernández.
+                </div>
+            </div>
+        </section>
+
+        <section id="balance">
+            <h2>Balance de Gestión: Aciertos y Desafíos</h2>
+            <p>Para construir una mirada analítica, equilibrada e histórica sobre este periodo de gobierno, los analistas políticos, sociólogos e historiadores contemporáneos suelen sopesar y contrastar los innegables progresos en materia de calidad institucional, transparencia informativa y desarrollo de infraestructura física de base, frente a los severos desajustes y fragilidades que se manifestaron en los indicadores del plano macroeconómico y social.</p>
+            
+            <div class="balance-grid">
+                <div class="balance-col col-positiva">
+                    <h3>Iniciativas y Aspectos Destacados</h3>
+                    <ul>
+                        <li><strong>Transparencia estadística institucional:</strong> Uno de los logros más reconocidos unánimemente fue la intervención defensora y normalización técnica del Instituto Nacional de Estadística y Censos (INDEC), devolviendo la confiabilidad y el prestigio profesional a los índices públicos de inflación, actividad económica y canastas de pobreza.</li>
+                        <li><strong>Modernización del Estado y desburocratización:</strong> Se transformó el ecosistema administrativo estatal mediante la implementación integral del Sistema de Gestión Documental Electrónica (GDE) y la digitalización integral de trámites en plataformas como "Trámites a Distancia" (TAD), reduciendo tiempos y costos organizativos de manera sustancial.</li>
+                        <li><strong>Inversión Estratégica en Energía:</strong> Logró revertirse paulatinamente la tendencia de déficit en la balanza comercial energética a través del incentivo a las inversiones privadas de gran escala en gas, petróleo y energías renovables de baja emisión de carbono.</li>
+                        <li><strong>Liderazgo y Diplomacia Internacional:</strong> La exitosa presidencia y posterior organización de la Cumbre del G20 de 2018 demostró fehacientemente una alta capacidad operativa para articular consensos mundiales complejos en un contexto de tensiones internacionales.</li>
+                    </ul>
+                </div>
+                
+                <div class="balance-col col-negativa">
+                    <h3>Dificultades y Desequilibrios Críticos</h3>
+                    <ul>
+                        <li><strong>Indicadores y descontrol inflacionario:</strong> Pese a ser calificado en campaña como un problema de fácil resolución, el control de precios fracasó de forma persistente; el mandato de gobierno concluyó registrando una tasa de inflación acumulada interanual del 53,8% para el año 2019.</li>
+                        <li><strong>Vulnerabilidad por Carga de Deuda:</strong> La transición fiscal financiada inicialmente con fondos externos derivó en un rápido incremento del ratio de endeudamiento soberano en moneda extranjera, asumiendo compromisos financieros rígidos y de corto plazo de amortización con organismos multilaterales de crédito.</li>
+                        <li><strong>Deterioro Social y del Empleo:</strong> El parate prolongado de la actividad económica tras las devaluaciones sucesivas deprimió los salarios reales, impulsó el desempleo y generó un visible deterioro social, elevando la tasa de pobreza medida por el INDEC al 35,5% al cierre de la gestión gubernamental.</li>
+                        <li><strong>Impacto del Costo de Servicios Públicos ("Tarifazos"):</strong> El agresivo proceso de quita de subsidios estatales e indexación tarifaria de servicios básicos golpeó de forma directa las finanzas domésticas de la clase media y vulneró los márgenes operativos de pequeñas y medianas empresas (PyMEs).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Tarea de Historia: Análisis de la Presidencia 2015-2019</p>
+    </footer>
+
+</body>
+</html>
